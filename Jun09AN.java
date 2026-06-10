@@ -1,19 +1,15 @@
-import java.util.Scanner;
-
 public class Jun09AN{
-
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
-        int n = 10;
-        long factorial = 1;
-
-        for (int i = 1; i <= n; i++) {
-            factorial = factorial * i;
+    
+    public static void isPrime(int num){
+     int factors = 0;
+     for (int i = 2; i<Math.sqrt(num); i++){
+        if (num % i === 0){
+            factors +=2;
+        
         }
-
-        System.out.println("Factorial of " + n + " = " + factorial);
-
-        sc.close();
+     }  
+     if (factors > 0){
+        System.out.println("Not");
+     } 
     }
 }
